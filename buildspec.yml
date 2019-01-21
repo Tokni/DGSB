@@ -9,6 +9,4 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync build/ s3://dgsb
-      - aws cloudfront create-invalidation --distribution-id ERZ3N7LF28Q6C --paths "/*"
-  
+      - aws s3 sync build/ s3://dgsb-klimaaftalen  
